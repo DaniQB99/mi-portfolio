@@ -1,0 +1,182 @@
+{
+    "basics": {
+        "name": "Daniel Quirós Barroso",
+        "label": "Técnico en Desarrollo de Aplicaciones Multiplataforma & Mecatrónica Industrial",
+        "image": "https://avatars.githubusercontent.com/u/189279534?s=400&u=11351f5e5d230cffecba0d15b6f416e10a1f3e02&v=4",
+        "email": "daniqb2010@gmail.com",
+        "phone": "+34 627004466",
+        "url": "https://www.linkedin.com/in/daniel-quiros-barroso/",
+        "summary": "",
+        "location": {
+            "address": "Avenida de Cánovas, 78",
+            "postalCode": "06400",
+            "city": "Don Benito",
+            "countryCode": "ES",
+            "region": "España"
+        },
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "DaniQB99",
+                "url": "https://github.com/DaniQB99"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "Daniel Quirós Barroso",
+                "url": "https://www.linkedin.com/in/daniel-quiros-barroso/"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Ibermática-Ayesa",
+            "position": "Becario",
+            "url": "https://www.ayesa.com/",
+            "startDate": "03/2029",
+            "endDate": "06/2029",
+            "summary": "400h de practivas en desarrollo de aplicaciones multiplataforma"
+        },
+        {
+            "name": "Company",
+            "position": "President",
+            "url": "https://company.com",
+            "startDate": "2013-01-01",
+            "endDate": "2014-01-01",
+            "summary": "Description…",
+            "highlights": [
+                "Started the company"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "I.E.S. Donoso Cortes",
+            "area": "Desarrollo de Aplicaciones Multiplataforma",
+            "studyType": "Grado Superior",
+            "startDate": "2017",
+            "endDate": "2019",
+            "courses": [
+                "DB1101 - Basic SQL"
+            ]
+        },
+        {
+            "institution": "C.I.F.P. Rodrigo Fabrés",
+            "area": "Mecatrónica Industrial",
+            "studyType": "Grado Superior",
+            "startDate": "2021",
+            "endDate": "2023"
+        }
+    ],
+    "awards": [
+        {
+            "title": "EVERIS Bootcamp",
+            "date": "2019",
+            "awarder": "EVERIS an NTT DATA"
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Certificate",
+            "date": "2021-11-07",
+            "issuer": "Company",
+            "url": "https://certificate.com"
+        }
+    ],
+    "publications": [
+        {
+            "name": "Publication",
+            "publisher": "Company",
+            "releaseDate": "2014-10-01",
+            "url": "https://publication.com",
+            "summary": "Description…"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Python",
+            "level": "Medio",
+            "keywords": [
+                "Desarrollo Backend"
+            ]
+        },
+        {
+            "name": "HTML & CSS",
+            "level": "Medio",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "Java",
+            "level": "Medio",
+            "keywords": [
+                "Desarrollo Backend"
+            ]
+        },
+        {
+            "name": "JavaScript",
+            "level": "Básico",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "MySQL",
+            "level": "Medio",
+            "keywords": [
+                "Bases de Datos",
+                "Backend",
+                "Almacenamiento de Datos"
+            ]
+        },
+        {
+            "name": "GitHub",
+            "level": "Medio",
+            "keywords": [
+                "Control de Versiones",
+                "Colaboración",
+                "Git"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Spanish",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "English",
+            "fluency": "Level A2 - B1"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Roadmap de retos de programación en Python",
+            "author": "Mouredev",
+            "isOpenSource": true,
+            "description": "Ruta de estudio con ejercicios para mejorar tu lógica de programación y aprender cualquier lenguaje.",
+            "url": "https://github.com/mouredev/roadmap-retos-programacion",
+            "skills": [
+                "Python",
+                "GitHub"
+            ]
+        },
+        {
+            "name": "The Python Mega Course: Build 10 Real World Applications",
+            "author": "Ardit Sulce",
+            "isOpenSource": true,
+            "description": "Aprende a construir aplicaciones reales con Python, APIs, GUIs, web apps y mucho más.",
+            "url": "https://www.udemy.com/course/former-python-mega-course-build-10-real-world-applications/",
+            "skills": [
+                "Python",
+                "GitHub",
+                "Django",
+                "Flask",
+                "SQL",
+                "Docker"
+            ]
+        }
+    ]
+}

@@ -1,22 +1,67 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/src/assets/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Daniel Quirós Barroso</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	html {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			"Courier New",
+			monospace;
+		background: white;
+		letter-spacing: -0.025rem;
+	}
+
+	body, 
+	figure {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
+	h1, h2, h3, h4, {
+		margin: 0;
+		font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+
+	p {
+		color:aqua;
+		font-size: .8rem;
+		line-height: 1.5;
+		margin: 0;
+		text-wrap: pretty; // text-wrap: pretty -> is not supported in Safari
 	}
 </style>
