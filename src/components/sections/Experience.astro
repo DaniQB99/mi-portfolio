@@ -1,7 +1,79 @@
 ---
 import Section from "../Section.astro";
+
+import { work } from "@cv";
 ---
 
-<Section title="Experience">
-    
+<Section title="Experiencia LABORAL">
+    <ul>
+        {
+            work.map(({ name, position, startDate, endDate, summary }) => {
+                const startYear = new Date(startDate).getFullYear();
+                const endYear =
+                    endDate != null
+                        ? new Date(endDate).getFullYear()
+                        : "Actual";
+                    
+                var years = null;
+                if (startYear == endYear) {
+                        years = `${startYear}`;
+                }
+                else {
+                    years = `${startYear} - ${endYear}`;
+                }
+
+                return (
+                    <li>
+                        <article>
+                            <header>
+                                <div>
+                                    <h3>{name}</h3>
+                                    <h4>{position}</h4>
+                                </div>
+                                
+                                <time>{years}</time>
+                            </header>
+                            <footer>
+                                <p>{summary}</p>
+                            </footer>
+                        </article>
+                    </li>
+                )
+            })
+        }
+    </ul>
 </Section>
+
+<style>
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    article h3 {
+        font-weight: 600;
+        color: #222;
+        font-size: 1.15rem;
+    }
+    article h4 {
+        font-weight: 500;
+        color: #444;
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2px;
+    }
+    time {
+        font-size: 1rem;
+        margin-top: 20px;
+        color: #444;
+    }
+    footer p {
+        color: #555;
+        font-size: 0.9rem;
+    }
+</style>

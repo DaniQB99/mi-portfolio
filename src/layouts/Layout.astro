@@ -28,7 +28,7 @@ const { title } = Astro.props;
 			Lucida Console,
 			"Courier New",
 			monospace;
-		background: white;
+		background: rgb(250, 250, 250);
 		letter-spacing: -0.025rem;
 	}
 
@@ -58,10 +58,23 @@ const { title } = Astro.props;
 	}
 
 	p {
-		color:aqua;
-		font-size: .8rem;
+		font-size: .9rem;
 		line-height: 1.5;
 		margin: 0;
+		color: #555;
 		text-wrap: pretty; // text-wrap: pretty -> is not supported in Safari
+	}
+
+	.print{
+		display: none !important;
+	}
+
+	@media print { 
+		.print{
+			display: block !important;
+		}
+		.no-print{
+			display: none !important;
+		}
 	}
 </style>

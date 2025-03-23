@@ -1,55 +1,80 @@
 ---
-import { basics } from "@cv";
-import Section from "@/components/Section.astro";
-import Mail from "@/icons/Mail.astro";
-import Phone from "@/icons/Phone.astro";
-import GitHub from "@/icons/GitHub.astro";
-import LinkedIn from "@/icons/LinkedIn.astro";
+    import { basics } from "@cv";
+    import Section from "@/components/Section.astro";
+    import Mail from "@/icons/Mail.astro";
+    import Phone from "@/icons/Phone.astro";
+    import GitHub from "@/icons/GitHub.astro";
+    import LinkedIn from "@/icons/LinkedIn.astro";
+    import CV from "@/icons/CV.astro";
 
-const { name, label, image, email, phone, url, summary, location, profiles } =
-    basics;
+    const { name, label, image, email, phone, location, profiles, cv } =
+        basics;
 
-const { city, region } = location;
+    const { city, region } = location;
 
-const SOCIAL_ICONS: Record<string, any> = {
-    GitHub,
-    LinkedIn,
-};
----
+    const SOCIAL_ICONS: Record<string, any> = {
+        GitHub,
+        LinkedIn,
+        CV
+    };
 
-<Section>
-    <div class="container">
-        <div class="info">
-            <h1>{name}</h1>
-            <h2>{label}</h2>
-            <span>
-                {city}, {region}
-            </span>
-            <footer>
-                {
-                    email && (
-                        <a
-                            href={`mailto:${email}`}
-                            title={`Enviar un correo electrónico a ${email} al correo ${email}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Mail />
-                        </a>
-                    )
-                }
-                {
-                    phone && (
-                        <a
-                            href={`tel:${phone}`}
-                            title={`Llamar al teléfono a ${phone} al número ${phone}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Phone />
-                        </a>
-                    )
-                }
+    const linkedInfo = profiles.find((profile) => profile.network === "LinkedIn");
+    const linkedUrl = linkedInfo?.url;
+
+    const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
+    ---
+
+    <Section>
+        <div class="container">
+            <div class="info">
+                <h1>{name}</h1>
+                <h2>{label}</h2>
+                <span>
+                    {city}, {region}
+                </span>
+
+                <footer class="print">
+                    {printInfo} 
+                </footer>
+
+                <footer class="no-print">
+                    
+                    {
+                        email && (
+                            <a
+                                href={`mailto:${email}`}
+                                title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Mail />
+                            </a>
+                        )
+                    }
+                    {
+                        phone && (
+                            <a
+                                href={`tel:${phone}`}
+                                title={`Llamar al teléfono de ${name} al número ${phone}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Phone />
+                            </a>
+                        )
+                    }
+                    {
+                        cv && (
+                            <a
+                                href={`cv:${cv}`}
+                                title={`Visita el curriculum de ${name}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <CV />
+                            </a>
+                        )
+                    }
                 {
                     profiles.map(({ network, url }) => {
                         const Icon = SOCIAL_ICONS[network];
@@ -74,4 +99,79 @@ const SOCIAL_ICONS: Record<string, any> = {
     </div>
 </Section>
 
-<style></style>
+<style>     
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-right: 32;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1px;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        font-weight: 650;
+        color: #444;
+        margin-bottom: 1px;
+        
+        text-wrap: balance; #es para que el texto quede en una sola línea
+    }
+
+    img {
+        aspect-ratio: 1/1; 
+        object-fit: cover;
+        width: 150px;
+        border-radius: 15px;
+    }
+
+    span {
+        font-size: 0.85rem;
+        display: flex;
+        color: #555;
+        align-items: center;
+        gap: .25rem;
+        font-size: .85rem;
+        letter-spacing: -0.05rem;
+    }
+
+    footer {
+        display: flex;
+        gap: 18px;
+        margin-top: 8px;
+        font-size: 0.65rem;
+        color: #666;
+    }
+
+    footer a {
+        color: #666;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #999;
+        padding: 1.5px;
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+        transition: all .3s ease;
+    }
+    
+    footer a:hover {
+        background-color: #999;
+    }
+
+
+    
+</style>

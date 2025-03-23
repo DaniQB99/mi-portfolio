@@ -5,8 +5,8 @@
         "image": "https://avatars.githubusercontent.com/u/189279534?s=400&u=11351f5e5d230cffecba0d15b6f416e10a1f3e02&v=4",
         "email": "daniqb2010@gmail.com",
         "phone": "+34 627004466",
-        "url": "https://www.linkedin.com/in/daniel-quiros-barroso/",
-        "summary": "",
+        "cv":"sadsadsaa",
+        "summary": "Soy Daniel, un profesional polivalente con experiencia y formación en sectores clave como la mecatrónica industrial y el desarrollo de aplicaciones multiplataforma. Actualmente trabajo como maquinista en una fábrica industrial, pero mi verdadera pasión siempre ha sido la programación y el desarrollo de software.",
         "location": {
             "address": "Avenida de Cánovas, 78",
             "postalCode": "06400",
@@ -32,20 +32,41 @@
             "name": "Ibermática-Ayesa",
             "position": "Becario",
             "url": "https://www.ayesa.com/",
-            "startDate": "03/2029",
-            "endDate": "06/2029",
+            "startDate": "Marzo 2019",
+            "endDate": "Junio 2019",
             "summary": "400h de practivas en desarrollo de aplicaciones multiplataforma"
         },
         {
-            "name": "Company",
-            "position": "President",
-            "url": "https://company.com",
-            "startDate": "2013-01-01",
-            "endDate": "2014-01-01",
-            "summary": "Description…",
-            "highlights": [
-                "Started the company"
-            ]
+            "name": "Pronat Sociedad Cooperativa",
+            "position": "Operador",
+            "url": "https://www.pronat.com.es/",
+            "startDate": "Enero 2020",
+            "endDate": "Septiembre 2022",
+            "summary": "Operador de la producción y paletización de productos alimenticios. Operador de carretilla en línea de producción" 
+        },
+        {
+            "name": "GBFoods - Industrias y Promociones Alimenticias S.A.",
+            "position": "Técnico de mantenimiento electrónico",
+            "url": "https://www.thegbfoods.com/es/",
+            "startDate": "Marzo 2023",
+            "endDate": "Octubre 2023",
+            "summary": "Mantenimiento electromecánico preventivo y correctivo de maquinaria industrial. Aplicación de soluciones técnicas para mejorar la eficiencia de la línea de producción." 
+        },
+        {
+            "name": "Distribución de Gasóleos García-Camacho",
+            "position": "Técnico de mantenimiento",
+            "url": "https://garciacamacho.com/",
+            "startDate": "Noviembre 2023",
+            "endDate": "Abril 2024",
+            "summary": "Mantenimiento electromecánico de estaciones de servicio e instalación de depósitos para gasóleos." 
+        },
+        {
+            "name": "Icap - Laundry Care (Inquiba S.A.)",
+            "position": "Maquinista de línea de llenado",
+            "url": "https://icap.es/",
+            "startDate": "Mayo 2024",
+            "endDate": null,
+            "summary": "Control y gestión de la producción en línea automatizada. Solución de problemas mecánicos y eléctricos      evitando paros en la producción." 
         }
     ],
     "education": [
@@ -54,10 +75,7 @@
             "area": "Desarrollo de Aplicaciones Multiplataforma",
             "studyType": "Grado Superior",
             "startDate": "2017",
-            "endDate": "2019",
-            "courses": [
-                "DB1101 - Basic SQL"
-            ]
+            "endDate": "2019"
         },
         {
             "institution": "C.I.F.P. Rodrigo Fabrés",
@@ -72,23 +90,6 @@
             "title": "EVERIS Bootcamp",
             "date": "2019",
             "awarder": "EVERIS an NTT DATA"
-        }
-    ],
-    "certificates": [
-        {
-            "name": "Certificate",
-            "date": "2021-11-07",
-            "issuer": "Company",
-            "url": "https://certificate.com"
-        }
-    ],
-    "publications": [
-        {
-            "name": "Publication",
-            "publisher": "Company",
-            "releaseDate": "2014-10-01",
-            "url": "https://publication.com",
-            "summary": "Description…"
         }
     ],
     "skills": [
@@ -155,7 +156,7 @@
         {
             "name": "Roadmap de retos de programación en Python",
             "author": "Mouredev",
-            "isOpenSource": true,
+            "isActive": true,
             "description": "Ruta de estudio con ejercicios para mejorar tu lógica de programación y aprender cualquier lenguaje.",
             "url": "https://github.com/mouredev/roadmap-retos-programacion",
             "skills": [
@@ -166,7 +167,7 @@
         {
             "name": "The Python Mega Course: Build 10 Real World Applications",
             "author": "Ardit Sulce",
-            "isOpenSource": true,
+            "isActive": true,
             "description": "Aprende a construir aplicaciones reales con Python, APIs, GUIs, web apps y mucho más.",
             "url": "https://www.udemy.com/course/former-python-mega-course-build-10-real-world-applications/",
             "skills": [
