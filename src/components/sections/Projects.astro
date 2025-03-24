@@ -4,7 +4,7 @@ import Section from "../Section.astro";
 import { projects } from "@cv";
 ---
 
-<Section title="Projectos">
+<Section id="proyectos" title="Projectos">
     <ul>
         {
             projects.map(
@@ -91,9 +91,10 @@ import { projects } from "@cv";
         color: black;
         font-size: 0.9rem;
         border-radius: 8px;
-        padding: 0.1rem 0.5rem;
-        font-weight: 500;
+        padding: 0.3rem;
+        font-weight: 600;
         text-align: center;
+        font-style: italic;
     }
     li:hover {
         background: #e6e6e6;

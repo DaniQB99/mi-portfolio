@@ -5,8 +5,7 @@
         "image": "https://avatars.githubusercontent.com/u/189279534?s=400&u=11351f5e5d230cffecba0d15b6f416e10a1f3e02&v=4",
         "email": "daniqb2010@gmail.com",
         "phone": "+34 627004466",
-        "cv":"sadsadsaa",
-        "summary": "Soy Daniel, un profesional polivalente con experiencia y formación en sectores clave como la mecatrónica industrial y el desarrollo de aplicaciones multiplataforma. Actualmente trabajo como maquinista en una fábrica industrial, pero mi verdadera pasión siempre ha sido la programación y el desarrollo de software.",
+        "summary": "Profesional polivalente con experiencia y formación en sectores clave como el desarrollo de aplicaciones multiplataforma y la mecatrónica industrial. Actualmente soy maquinista en una fábrica industrial, pero mi verdadera pasión y a lo que me quiero dedicar profesionalmente es la programación y el desarrollo de software.",
         "location": {
             "address": "Avenida de Cánovas, 78",
             "postalCode": "06400",
@@ -24,7 +23,13 @@
                 "network": "LinkedIn",
                 "username": "Daniel Quirós Barroso",
                 "url": "https://www.linkedin.com/in/daniel-quiros-barroso/"
+            },
+            {
+                "network": "CV",
+                "username": "CV - Daniel Quirós Barroso",
+                "url": ""
             }
+
         ]
     },
     "work": [

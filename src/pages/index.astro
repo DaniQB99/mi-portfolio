@@ -2,6 +2,7 @@
 // Se ejecuta cuando se carga la página en el navegador
 import Layout from '@/layouts/Layout.astro';
 
+import Header from '@/components/sections/Header.astro';
 import Hero from '@/components/sections/Hero.astro';
 import About from '@/components/sections/About.astro';
 import Experience from '@/components/sections/Experience.astro';
@@ -12,13 +13,15 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 ---
 
 <Layout title="Mi Portfolio">
+
 	<main>
-		<Hero />
-		<About />
-		<Experience />
-		<Education />
-		<Projects />
-		<Skills />
+		<Header />
+		<Hero id="top" />
+		<About id="sobremi" />
+		<Experience id="experiencia" />
+		<Education id="educacion" />
+		<Projects id="proyectos" />
+		<Skills id="skills" />
 	</main>
 
 	<KeyboardManager />

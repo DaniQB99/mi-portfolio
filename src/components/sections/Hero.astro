@@ -1,5 +1,6 @@
 ---
     import { basics } from "@cv";
+    
     import Section from "@/components/Section.astro";
     import Mail from "@/icons/Mail.astro";
     import Phone from "@/icons/Phone.astro";
@@ -7,7 +8,7 @@
     import LinkedIn from "@/icons/LinkedIn.astro";
     import CV from "@/icons/CV.astro";
 
-    const { name, label, image, email, phone, location, profiles, cv } =
+    const { name, label, image, email, phone, location, profiles } =
         basics;
 
     const { city, region } = location;
@@ -24,7 +25,8 @@
     const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     ---
 
-    <Section>
+    <Section id="top">
+
         <div class="container">
             <div class="info">
                 <h1>{name}</h1>
@@ -64,33 +66,21 @@
                         )
                     }
                     {
-                        cv && (
-                            <a
-                                href={`cv:${cv}`}
-                                title={`Visita el curriculum de ${name}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <CV />
-                            </a>
-                        )
-                    }
-                {
-                    profiles.map(({ network, url }) => {
-                        const Icon = SOCIAL_ICONS[network];
+                        profiles.map(({ network, url }) => {
+                            const Icon = SOCIAL_ICONS[network];
 
-                        return (
-                            <a
-                                href={url}
-                                title={`Visitar el perfil de ${name} en ${network}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Icon />
-                            </a>
-                        );
-                    })
-                }
+                            return (
+                                <a
+                                    href={url}
+                                    title={`Visitar el perfil de ${name} en ${network}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Icon />
+                                </a>
+                            );
+                        })
+                    }
             </footer>
         </div>
         <figure>
