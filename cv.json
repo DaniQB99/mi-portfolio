@@ -106,7 +106,15 @@
             ]
         },
         {
-            "name": "HTML & CSS",
+            "name": "HTML5",
+            "level": "Medio",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "CSS3",
             "level": "Medio",
             "keywords": [
                 "Desarrollo Web",

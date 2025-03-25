@@ -2,17 +2,38 @@
 import Section from "../Section.astro";
 
 import { skills } from "@cv";
+const { name } = skills[0];
+
+import CSS3 from "@/icons/CSS3.astro";
+import HTML5 from "@/icons/HTML5.astro";
+import Java from "@/icons/Java.astro";
+import JavaScript from "@/icons/JavaScript.astro";
+import MySQL from "@/icons/MySQL.astro";
+import Python from "@/icons/Python.astro";
+import GitHub from "@/icons/GitHub.astro";
+
+const SKILLS_ICONS: Record<string, any> = {
+    CSS3,
+    HTML5,
+    Java,
+    JavaScript,
+    MySQL,
+    Python,
+    GitHub
+};
 ---
 
 <Section id="skills" title="Skills">
     
     <ul>
         {
-            skills.map(({ name, level, keywords }) => {
+            skills.map(({ name }) => {
+                const Icon = SKILLS_ICONS[name];
+
                 return (
                     <li>
                         <h3>{name}</h3>
-
+                        <Icon />
                     </li>
                 )
             })
@@ -29,15 +50,17 @@ import { skills } from "@cv";
     }
 
     li {
-        align-items: center;
+        display: flex;
         background: #e0e0e0;
         color: black;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         border-radius: 8px;
         padding: 0.1rem 1rem;
         font-weight: 600;
-        margin-right: 20px;
+        margin-right: 5px;
         font-style: italic;
+        gap: 0.5rem;
+        align-items: center;
     }
 
     li:hover {
