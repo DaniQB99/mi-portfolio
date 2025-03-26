@@ -2,78 +2,87 @@
 import Section from "../Section.astro";
 
 import { work } from "@cv";
+
+console.log(work);
 ---
 
 <Section id="experiencia" title="Experiencia laboral">
     <ul>
-        {
-            work.map(({ name, position, startDate, endDate, summary }) => {
+    {
+        work.map(
+            ({ name, position, startDate, endDate, summary }) => {
                 const startYear = new Date(startDate).getFullYear();
                 const endYear =
                     endDate != null
                         ? new Date(endDate).getFullYear()
                         : "Actual";
-                    
+
                 var years = null;
                 if (startYear == endYear) {
-                        years = `${startYear}`;
-                }
-                else {
+                    years = `${startYear}`;
+                } else {
                     years = `${startYear} - ${endYear}`;
                 }
 
-                return (
-                    <li>
-                        <article>
-                            <header>
-                                <div>
-                                    <h3>{name}</h3>
-                                    <h4>{position}</h4>
-                                </div>
-                                
-                                <time>{years}</time>
-                            </header>
-                            <footer>
-                                <p>{summary}</p>
-                            </footer>
-                        </article>
-                    </li>
+                return (        
+                        <li>
+                            <div />
+                            <time> {years} </time>
+                            <h3> {name} </h3>
+                            <h4> {position} </h4>
+                            <p> {summary} </p> 
+                        </li>
                 )
-            })
-        }
+            }
+        )
+    }
     </ul>
+            
 </Section>
 
 <style>
     ul {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
+        position: relative;
+        border-inline-start: 1px solid;
+        border-color: #666;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
     }
-    article h3 {
-        font-weight: 600;
-        color: #222;
-        font-size: 1.15rem;
-    }
-    article h4 {
-        font-weight: 500;
-        color: #444;
-        font-size: 1rem;
-        margin-bottom: 4px;
-    }
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 2px;
+
+    div {
+        position: absolute;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: #444;
+        border-radius: 100%;
+        margin-top: 0.1rem;
+        inset-inline-start: -0.4rem;  
     }
     time {
         font-size: 1rem;
-        margin-top: 20px;
         color: #444;
+        font-style: italic;
     }
-    footer p {
+    h3 {
+        font-weight: 800;
+        color: #222;
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+    h4 {
+        font-weight: 500;
+        color: #33;
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+    }
+    p {
         color: #555;
         font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    li::marker {
+        content: "";
+        display: none;
     }
 </style>

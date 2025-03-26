@@ -100,4 +100,15 @@ import { projects } from "@cv";
         background: #e6e6e6;
         border-radius: 8px;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+        li {
+            transition: none;
+        }
+    }
+
+    li::marker {
+        content: "";
+        display: none;
+    }
 </style>
